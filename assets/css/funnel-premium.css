@@ -1,0 +1,63 @@
+/* PREMIUM FUNNEL STYLES */
+.premium-funnel-card { 
+    width: 100%; 
+    border-radius: 16px; 
+    padding: 20px 24px; 
+    color: white; 
+    display: flex; 
+    flex-direction: column; 
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); 
+    position: relative; 
+    overflow: hidden; 
+}
+.premium-funnel-card::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; left: 0; right: 0; bottom: 0; 
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%); 
+    pointer-events: none; 
+}
+.funnel-card-content { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative; 
+    z-index: 1; 
+}
+.premium-funnel-card .funnel-step-label { 
+    font-size: 16px; 
+    font-weight: 700; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+.premium-funnel-card .funnel-step-value { 
+    font-size: 24px; 
+    font-weight: 800; 
+}
+.premium-funnel-card.step-1 { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.premium-funnel-card.step-2 { background: linear-gradient(135deg, #10b981, #059669); }
+.premium-funnel-card.step-3 { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.premium-funnel-card.step-4 { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.premium-funnel-card.step-5 { background: linear-gradient(135deg, #ec4899, #db2777); }
+
+.funnel-connector { 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    padding: 15px 0; 
+}
+.connector-stats { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+}
+.conv-badge, .loss-badge { 
+    padding: 4px 10px; 
+    border-radius: 6px; 
+    font-size: 12px; 
+    font-weight: 600; 
+    display: inline-block; 
+}
+.conv-badge { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+.loss-badge { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }

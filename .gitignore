@@ -1,0 +1,15 @@
+# Ignorar archivos de configuracion sensibles (Credenciales de BD)
+app/config/database.php
+
+# Ignorar logs de errores
+registro_de_errores
+*.log
+
+# Ignorar imagenes o archivos subidos por usuarios (evita subir fotos pesadas de los trabajadores)
+uploads/*
+!uploads/.gitkeep
+
+# Archivos de entorno y editores
+.env
+.vscode/
+.idea/

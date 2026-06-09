@@ -1,0 +1,58 @@
+﻿/* ====== CSS FOR app/views/public/solicitar_publicidad.php ====== */
+
+        .register-page { max-width: 700px; margin: 0 auto; padding: 20px 16px; padding-top: 100px; }
+        
+        .page-header { text-align: center; margin-bottom: 32px; }
+        .back-link { display: inline-flex; align-items: center; gap: 6px; color: #10b981; text-decoration: none; font-size: 14px; font-weight: 700; margin-bottom: 16px; background: white; padding: 8px 16px; border-radius: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s; }
+        .back-link:hover { background: #f8fafc; transform: translateY(-1px); }
+        .page-header h1 { font-size: 32px; font-weight: 800; color: #1e293b; margin-bottom: 12px; line-height: 1.2; }
+        
+        .plan-badge-inline { background: #10b981; color: white; padding: 4px 12px; border-radius: 8px; font-weight: 800; font-size: 14px; margin-left: 4px; display: inline-block; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2); }
+
+        .error-box { background: #fef2f2; border: 1.5px dashed #f87171; border-radius: 16px; padding: 24px; margin-bottom: 32px; color: #991b1b; }
+        .error-box strong { display: block; font-size: 16px; font-weight: 800; margin-bottom: 12px; }
+        .error-box ul { margin: 0; padding-left: 20px; }
+        .error-box li { font-size: 14px; line-height: 1.5; margin-bottom: 6px; }
+
+        .success-card { background: white; border-radius: 24px; padding: 40px 32px; text-align: center; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05); }
+        .success-icon { font-size: 64px; margin-bottom: 24px; animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes scaleIn { from { transform: scale(0); } to { transform: scale(1); } }
+        .success-card h2 { font-size: 28px; font-weight: 800; color: #1e293b; margin-bottom: 16px; }
+        .success-card p { font-size: 16px; color: #64748b; line-height: 1.6; margin-bottom: 16px; }
+        .success-card .btn-primary { margin-top: 24px; display: inline-block; padding: 14px 32px; border-radius: 12px; background: #10b981; color: white; font-weight: 700; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2); }
+        .success-card .btn-primary:hover { background: #059669; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3); }
+
+        .form-card { background: white; border-radius: 24px; padding: 32px; box-shadow: 0 4px 20px -5px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; }
+        
+        .promo-alert { background: #ecfdf5; color: #065f46; padding: 16px; border-radius: 16px; margin-bottom: 24px; border: 1.5px dashed #10b981; font-weight: 800; text-align: center; font-size: 15px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.1); }
+        
+        .form-card label { display: block; font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 8px; margin-top: 20px; }
+        .form-card label:first-of-type { margin-top: 0; }
+        
+        .form-card input[type="text"], 
+        .form-card input[type="url"],
+        .form-card select, 
+        .form-card textarea {
+            width: 100%; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #e2e8f0; background: #f8fafc; font-size: 15px; color: #1e293b; transition: all 0.2s; font-family: inherit;
+        }
+        .form-card input[type="text"]:focus, 
+        .form-card input[type="url"]:focus,
+        .form-card select:focus, 
+        .form-card textarea:focus {
+            outline: none; border-color: #10b981; background: white; box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+        
+        .form-card input[type="file"] { width: 100%; padding: 12px; border: 1.5px dashed #cbd5e1; border-radius: 12px; background: #f8fafc; cursor: pointer; transition: all 0.2s; }
+        .form-card input[type="file"]:hover { border-color: #10b981; background: #f0fdf4; }
+
+        .form-hint { font-size: 12px; color: #64748b; margin-top: 6px; background: #f8fafc; padding: 8px 12px; border-radius: 8px; }
+
+        .checkbox-label { display: flex !important; align-items: center; gap: 12px; font-weight: 600 !important; font-size: 14px !important; color: #475569 !important; cursor: pointer; margin-top: 24px !important; }
+        .checkbox-label input[type="checkbox"] { width: 20px; height: 20px; margin-top: 0; accent-color: #10b981; cursor: pointer; }
+
+        .form-button { width: 100%; padding: 16px; border-radius: 12px; background: #10b981; color: white; font-weight: 800; font-size: 16px; border: none; cursor: pointer; transition: all 0.2s; margin-top: 32px; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2); }
+        .form-button:hover { background: #059669; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3); }
+
+        .btn-secondary { background: #f1f5f9; color: #475569; padding: 12px 16px; border-radius: 10px; font-weight: 700; font-size: 14px; border: none; cursor: pointer; transition: all 0.2s; }
+        .btn-secondary:hover { background: #e2e8f0; color: #1e293b; }
+    

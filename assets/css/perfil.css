@@ -1,0 +1,209 @@
+/* ====== CSS FOR app/views/public/perfil.php ====== */
+
+        /* --- PERFIL PREMIUM MOBILE-FIRST --- */
+        body { background-color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
+        .perfil-page { max-width: 680px; margin: 0 auto; padding: 20px 16px 120px; }
+
+        .perfil-back { 
+            display: inline-flex; align-items: center; gap: 6px;
+            color: #64748b; text-decoration: none; font-size: 14px; font-weight: 600;
+            margin-bottom: 20px; background: white; padding: 8px 16px; border-radius: 20px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: all 0.2s;
+        }
+        .perfil-back:hover { color: #10b981; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.08); }
+
+        /* Header del perfil - HERO SECTION */
+        .perfil-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 28px; padding: 32px 24px;
+            box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.3);
+            display: flex; gap: 24px; align-items: center;
+            margin-bottom: 24px; position: relative; overflow: hidden;
+        }
+        /* Decoración de fondo en el header */
+        .perfil-header::after {
+            content: ''; position: absolute; top: -50px; right: -50px;
+            width: 150px; height: 150px; background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, transparent 70%);
+            border-radius: 50%; pointer-events: none;
+        }
+        
+        .perfil-avatar {
+            width: 100px; height: 100px; border-radius: 24px; overflow: hidden;
+            background: linear-gradient(135deg, #10b981, #059669);
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 36px; font-weight: 800; flex-shrink: 0;
+            border: 4px solid rgba(255,255,255,0.1); box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        .perfil-avatar img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .perfil-header-info { z-index: 1; flex-grow: 1; }
+        .perfil-name { font-size: 26px; font-weight: 900; color: #f8fafc; margin: 0 0 8px; letter-spacing: -0.5px; }
+        .perfil-servicio { 
+            font-size: 15px; color: #10b981; font-weight: 700; margin: 0 0 12px; 
+            background: rgba(16, 185, 129, 0.1); display: inline-block; padding: 6px 14px; border-radius: 50px; 
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        .perfil-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+        .perfil-badge {
+            font-size: 11px; font-weight: 800; padding: 6px 12px;
+            border-radius: 50px; text-transform: uppercase; letter-spacing: 0.5px;
+            display: inline-flex; align-items: center; gap: 4px;
+        }
+        .perfil-badge.verified { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .perfil-badge.featured { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+        /* Info cards - GLASSMORPHISM / MICROANIMATIONS */
+        .perfil-info-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 16px; margin-bottom: 24px;
+        }
+        .info-chip {
+            background: white; border-radius: 20px; padding: 18px 16px;
+            display: flex; align-items: center; gap: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #f1f5f9;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .info-chip:hover {
+            transform: translateY(-4px); box-shadow: 0 12px 25px rgba(16, 185, 129, 0.08); border-color: #d1fae5;
+        }
+        .info-chip-icon {
+            width: 44px; height: 44px; border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            background: #ecfdf5; flex-shrink: 0; color: #10b981;
+            transition: all 0.3s;
+        }
+        .info-chip:hover .info-chip-icon { background: #10b981; color: white; transform: scale(1.05); }
+        .info-chip-icon svg, .info-chip-icon i { width: 22px; height: 22px; }
+        .info-chip-text { font-size: 13px; color: #64748b; line-height: 1.4; }
+        .info-chip-text strong { display: block; font-size: 16px; color: #1e293b; font-weight: 800; margin-bottom: 2px; }
+
+        /* Secciones */
+        .perfil-section {
+            background: #fff; border-radius: 28px; padding: 30px;
+            box-shadow: 0 8px 25px -5px rgba(0,0,0,0.04); margin-bottom: 20px;
+            border: 1px solid #f8fafc;
+        }
+        .perfil-section h2 { font-size: 20px; font-weight: 800; color: #0f172a; margin: 0 0 16px; display: flex; align-items: center; gap: 10px; }
+        .perfil-section h2 i { color: #10b981; width: 24px; height: 24px; }
+        .perfil-section p { font-size: 16px; color: #475569; line-height: 1.7; margin: 0; }
+
+        /* Verificación inline */
+        .verif-row { display: flex; flex-wrap: wrap; gap: 12px; }
+        .verif-tag {
+            font-size: 14px; color: #065f46; font-weight: 600; background: #ecfdf5; padding: 8px 16px; border-radius: 50px;
+            display: flex; align-items: center; gap: 6px; border: 1px solid #d1fae5;
+        }
+
+        /* Reseñas */
+        .review-card {
+            background: #f8fafc; border-radius: 20px; padding: 20px;
+            margin-bottom: 16px; border: 1px solid #f1f5f9; transition: transform 0.2s;
+        }
+        .review-card:hover { transform: translateX(4px); border-color: #e2e8f0; }
+        .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .review-header strong { font-size: 16px; color: #1e293b; font-weight: 800; }
+        .review-card p { font-size: 15px; color: #475569; margin: 0; line-height: 1.6; }
+        .review-date { font-size: 13px; color: #94a3b8; display: block; margin-top: 10px; font-weight: 500; }
+
+        /* Form opinión */
+        .rating-form { display: flex; flex-direction: column; gap: 16px; }
+        .rating-form label { font-size: 15px; font-weight: 800; color: #0f172a; margin: 0; }
+        .rating-form input[type="text"],
+        .rating-form textarea {
+            width: 100%; padding: 16px; border: 2px solid #e2e8f0; background: #f8fafc;
+            border-radius: 16px; font-size: 15px; resize: none;
+            box-sizing: border-box; transition: all 0.3s;
+            font-family: inherit; color: #1e293b;
+        }
+        .rating-form textarea:focus { border-color: #10b981; background: #fff; box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1); outline: none; }
+        .rating-form textarea { height: 110px; }
+        
+        .btn-primary {
+            background: #10b981; color: white; border: none; cursor: pointer; transition: all 0.3s;
+        }
+        .btn-primary:hover { background: #059669; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(16,185,129,0.3); }
+
+        /* Estrellas interactiva (CSS puro) */
+        .star-rating {
+            display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 4px;
+        }
+        .star-rating input { display: none; }
+        .star-rating label { cursor: pointer; width: 32px; height: 32px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cbd5e1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'/%3E%3C/svg%3E"); background-size: contain; transition: all 0.2s; }
+        .star-rating input:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fbbf24' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'/%3E%3C/svg%3E");
+            transform: scale(1.1);
+        }
+
+        /* WhatsApp sticky con Pulso */
+        .wa-sticky {
+            position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            padding: 16px 20px;
+            border-top: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.08);
+            display: flex !important; align-items: center;
+            gap: 16px; max-width: 680px; margin: 0 auto;
+        }
+        .wa-sticky .btn-share {
+            background: #f1f5f9 !important; color: #475569 !important; flex: 0 0 56px !important;
+            width: 56px !important; height: 56px !important; padding: 0 !important;
+            display: flex !important; align-items: center !important; justify-content: center !important;
+            border-radius: 18px !important; border: 1px solid #e2e8f0 !important; cursor: pointer !important; transition: all 0.3s;
+        }
+        .wa-sticky .btn-share:hover { background: #e2e8f0 !important; transform: scale(1.05); color: #0f172a !important; }
+        .wa-sticky a, .wa-sticky button:not(.btn-share) {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            width: 100%; padding: 18px; border-radius: 18px;
+            background: #25D366; color: #fff; font-size: 17px; font-weight: 800;
+            text-decoration: none; border: none; cursor: pointer; transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            animation: pulse-wa 2s infinite;
+        }
+        .wa-sticky a:hover, .wa-sticky button:not(.btn-share):hover { 
+            background: #20bd5a; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); 
+            animation: none; /* Se detiene al pasar el mouse */
+        }
+        .wa-sticky svg, .wa-sticky i { width: 24px; height: 24px; }
+
+        @keyframes pulse-wa {
+            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+            50% { transform: scale(1.02); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5); }
+            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+        }
+
+        /* Modal */
+        .login-gate-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 10000;
+            justify-content: center; align-items: center;
+        }
+        .login-gate-overlay.active { display: flex; }
+        .login-gate-modal {
+            background: #fff; border-radius: 28px; padding: 40px 30px;
+            max-width: 400px; width: 90%; text-align: center; position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        }
+        .login-gate-modal h2 { font-size: 24px; font-weight: 900; color: #0f172a; margin: 0 0 12px; }
+        .login-gate-modal p { font-size: 15px; color: #64748b; margin-bottom: 24px; line-height: 1.6; }
+        .close-modal {
+            position: absolute; top: 16px; right: 20px;
+            background: #f1f5f9; border: none; font-size: 24px; cursor: pointer; color: #64748b; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+        }
+        .close-modal:hover { background: #e2e8f0; color: #1e293b; }
+
+        @media (min-width: 681px) {
+            .perfil-page { padding-bottom: 120px; padding-top: 40px; }
+            .wa-sticky { 
+                border: 1px solid rgba(226, 232, 240, 0.8);
+                border-bottom: none;
+                border-radius: 28px 28px 0 0;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .perfil-header { flex-direction: column; text-align: center; gap: 16px; padding: 32px 20px; }
+            .perfil-badges { justify-content: center; }
+            .perfil-info-grid { grid-template-columns: 1fr; }
+        }

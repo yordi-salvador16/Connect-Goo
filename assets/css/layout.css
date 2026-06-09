@@ -1,0 +1,29 @@
+/* ====== ENCABEZADOS DE PÁGINAS INTERNAS ====== */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #102033;
+}
+
+.page-header p {
+    color: #34495e;
+    line-height: 1.5;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #102033;
+    font-weight: bold;
+}
+
+.category-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}

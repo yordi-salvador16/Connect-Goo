@@ -1,0 +1,223 @@
+
+
+/* ====== PLANES DE PUBLICIDAD ====== */
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    align-items: stretch;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.plan-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 100%;
+}
+
+.plan-card.featured {
+    border-color: #00a94f;
+    transform: translateY(-10px);
+    box-shadow: 0 14px 34px rgba(0, 169, 79, 0.18);
+}
+
+.plan-badge {
+    display: inline-block;
+    background: #fff2bf;
+    color: #9a6500;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 14px;
+    width: fit-content;
+}
+
+.plan-card h2 {
+    font-size: 28px;
+    color: #102033;
+    line-height: 1.15;
+}
+
+.plan-card h3 {
+    font-size: 34px;
+    color: #008b45;
+    margin: 0;
+}
+
+.plan-card h3 span {
+    font-size: 16px;
+    color: #34495e;
+    font-weight: normal;
+}
+
+.plan-card p {
+    color: #34495e;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.plan-card li {
+    color: #102033;
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+.plan-card .btn-primary {
+    margin-top: auto;
+    text-align: center;
+}
+
+/* ====== RESPONSIVE PLANES ====== */
+
+@media (max-width: 1000px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-card.featured {
+        transform: none;
+    }
+}
+
+/* ====== PLAN SELECCIONADO EN FORMULARIO ====== */
+
+.selected-plan-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    border-left: 6px solid #00a94f;
+    margin-bottom: 24px;
+}
+
+.selected-plan-card h2 {
+    color: #102033;
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.selected-plan-card h3 {
+    color: #008b45;
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.selected-plan-card h3 span {
+    color: #34495e;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.selected-plan-card p {
+    color: #34495e;
+    line-height: 1.5;
+}
+/* ====== PLANES PARA TRABAJADORES ====== */
+
+.worker-plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    align-items: stretch;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.worker-plan-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.worker-plan-card.featured {
+    border-color: #00a94f;
+    transform: translateY(-10px);
+    box-shadow: 0 14px 34px rgba(0, 169, 79, 0.18);
+}
+
+.worker-plan-card.premium {
+    border-color: #008b45;
+}
+
+.worker-plan-card h2 {
+    font-size: 28px;
+    color: #102033;
+    line-height: 1.15;
+}
+
+.worker-plan-card h3 {
+    font-size: 34px;
+    color: #008b45;
+    margin: 0;
+}
+
+.worker-plan-card h3 span {
+    font-size: 16px;
+    color: #34495e;
+    font-weight: normal;
+}
+
+.worker-plan-card p {
+    color: #34495e;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.worker-plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.worker-plan-card li {
+    color: #102033;
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+.worker-plan-card .btn-primary {
+    margin-top: auto;
+    text-align: center;
+}
+
+.premium-badge {
+    background: #dff7ff;
+    color: #006b8f;
+}
+
+/* ====== RESPONSIVE PLANES TRABAJADORES ====== */
+
+@media (max-width: 1000px) {
+    .worker-plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .worker-plan-card.featured {
+        transform: none;
+    }
+}

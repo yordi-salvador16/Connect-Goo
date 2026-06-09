@@ -1,0 +1,120 @@
+/* ====== POPUP DE SALIDA PREMIUM (EXIT-INTENT) ====== */
+
+.exit-intent-overlay {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+}
+
+.exit-intent-box {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 32px;
+    max-width: 480px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: premiumFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes premiumFadeIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.exit-intent-box .close-x {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #bbb;
+    transition: all 0.3s;
+}
+
+.exit-intent-box .close-x:hover {
+    color: #ff4d4d;
+    transform: rotate(90deg);
+}
+
+.exit-intent-box h2 {
+    font-size: 34px;
+    color: #102033;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.exit-intent-box p {
+    color: #4a5568;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.exit-intent-box input[type="email"] {
+    width: 100%;
+    padding: 18px;
+    border: 2px solid #edf2f7;
+    border-radius: 16px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    background: #f7fafc;
+    transition: all 0.3s;
+}
+
+.exit-intent-box input[type="email"]:focus {
+    border-color: #00a94f;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 169, 79, 0.1);
+}
+
+.exit-intent-box .btn-google {
+    width: 100%;
+    padding: 16px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.exit-intent-box .btn-google:hover {
+    background: #f7fafc;
+    border-color: #cbd5e0;
+}
+
+.exit-intent-box .divider {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    color: #a0aec0;
+    font-size: 14px;
+}
+
+.exit-intent-box .divider::before,
+.exit-intent-box .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+}
+
+.exit-intent-box .divider::before { margin-right: 15px; }
+.exit-intent-box .divider::after { margin-left: 15px; }

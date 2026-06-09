@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Boceto - ConnectGoo Categorías (Incuba UNAS)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 40%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Estilos del Switch/Tabs */
+        .tab-active { background-color: #10b981; color: white; border-color: #10b981; }
+        .tab-inactive { background-color: white; color: #64748b; border-color: transparent; }
+        .tab-inactive:hover { background-color: #f1f5f9; color: #334155; }
+        
+        /* Estilos de las tarjetas Agro */
+        .agro-card { border: 1px solid #d1fae5; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .agro-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px -8px rgba(16, 185, 129, 0.2); border-color: #34d399; }
+        .agro-icon-bg { background: #ecfdf5; color: #059669; }
+        
+        /* Estilos de las tarjetas Urbanas (Ciudad) */
+        .urban-card { border: 1px solid #e2e8f0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .urban-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px -8px rgba(15, 23, 42, 0.08); border-color: #94a3b8; }
+        .urban-icon-bg { background: #f1f5f9; color: #475569; }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- NAVBAR (Cabecera) -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <i data-lucide="shield-check" class="text-emerald-500 w-8 h-8 stroke-[2.5]"></i>
+                <span class="font-black tracking-tight text-2xl gradient-text">ConnectGoo</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 font-semibold text-slate-600">
+                <a href="#" class="hover:text-emerald-600 transition-colors">Inicio</a>
+                <a href="#" class="hover:text-emerald-600 transition-colors">Nosotros</a>
+                <a href="#" class="text-slate-900 border-b-2 border-slate-900 pb-1">Buscar servicios</a>
+                <!-- NUEVO BOTÓN EN EL MENÚ -->
+                <a href="#" class="px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full flex items-center gap-2 border border-emerald-200 hover:bg-emerald-100 transition-all transform hover:scale-105 shadow-sm">
+                    <i data-lucide="sprout" class="w-4 h-4"></i> Sector Agro
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ENCABEZADO DE LA SECCIÓN -->
+    <section class="max-w-6xl mx-auto px-4 pt-12 pb-8 text-center">
+        <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs tracking-wider uppercase mb-4">Directorio de Profesionales</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">¿Qué necesitas solucionar hoy?</h1>
+        <p class="text-lg text-slate-500 max-w-2xl mx-auto">Conectamos el mejor talento de la ciudad y el campo directamente contigo a través de WhatsApp.</p>
+    </section>
+
+    <!-- EL "SWITCH" O PESTAÑAS (Aquí está la magia de separar los servicios) -->
+    <section class="max-w-md mx-auto px-4 mb-14">
+        <div class="flex p-1.5 bg-slate-200/60 rounded-2xl border border-slate-200/50 relative">
+            <button id="btn-urban" class="flex-1 py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 tab-inactive transition-all duration-300" onclick="showTab('urban')">
+                <i data-lucide="building-2" class="w-5 h-5"></i> Ciudad
+            </button>
+            <button id="btn-agro" class="flex-1 py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 tab-active shadow-md transition-all duration-300" onclick="showTab('agro')">
+                <i data-lucide="tractor" class="w-5 h-5"></i> Campo (Agro)
+            </button>
+        </div>
+        <p class="text-center text-xs text-slate-400 mt-3"><i data-lucide="info" class="w-3 h-3 inline"></i> Selecciona un sector para ver las categorías</p>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 1: SECCIÓN AGRO (La novedad para el concurso) -->
+    <!-- ============================================== -->
+    <section id="content-agro" class="max-w-6xl mx-auto px-4 pb-24">
+        <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-emerald-50 rounded-2xl p-6 border border-emerald-100">
+            <div class="flex items-center gap-4">
+                <div class="p-3.5 bg-emerald-500 text-white rounded-xl shadow-sm shadow-emerald-200"><i data-lucide="leaf"></i></div>
+                <div>
+                    <h2 class="text-2xl font-bold text-emerald-900">Servicios Agrícolas</h2>
+                    <p class="text-emerald-700/80">Soluciones para tu chacra, maquinaria y transporte rural.</p>
+                </div>
+            </div>
+            <div class="text-sm font-bold text-emerald-800 bg-white px-4 py-2 rounded-lg border border-emerald-200 shadow-sm">
+                📍 Tingo María y alrededores
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+            <!-- Categoría Agro 1 -->
+            <a href="#" class="bg-white rounded-2xl p-6 text-center agro-card flex flex-col items-center gap-4 group">
+                <div class="w-16 h-16 rounded-2xl flex items-center justify-center agro-icon-bg group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                    <i data-lucide="wrench" class="w-8 h-8"></i>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base leading-tight">Mecánica Agrícola</h3>
+                    <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2 py-1 rounded-md mt-3 inline-block border border-emerald-100">12 disponibles</span>
+                </div>
+            </a>
+            
+            <!-- Categoría Agro 2 -->
+            <a href="#" class="bg-white rounded-2xl p-6 text-center agro-card flex flex-col items-center gap-4 group">
+                <div class="w-16 h-16 rounded-2xl flex items-center justify-center agro-icon-bg group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                    <i data-lucide="truck" class="w-8 h-8"></i>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base leading-tight">Fletes y Transporte</h3>
+                    <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2 py-1 rounded-md mt-3 inline-block border border-emerald-100">8 disponibles</span>
+                </div>
+            </a>
+            
+            <!-- Categoría Agro 3 -->
+            <a href="#" class="bg-white rounded-2xl p-6 text-center agro-card flex flex-col items-center gap-4 group">
+                <div class="w-16 h-16 rounded-2xl flex items-center justify-center agro-icon-bg group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                    <i data-lucide="users" class="w-8 h-8"></i>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base leading-tight">Mano de Obra (Peones)</h3>
+                    <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2 py-1 rounded-md mt-3 inline-block border border-emerald-100">24 disponibles</span>
+                </div>
+            </a>
+            
+             <!-- Categoría Agro 4 -->
+            <a href="#" class="bg-white rounded-2xl p-6 text-center agro-card flex flex-col items-center gap-4 group">
+                <div class="w-16 h-16 rounded-2xl flex items-center justify-center agro-icon-bg group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                    <i data-lucide="plane" class="w-8 h-8"></i>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base leading-tight">Drones Agrícolas</h3>
+                    <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2 py-1 rounded-md mt-3 inline-block border border-emerald-100">3 disponibles</span>
+                </div>
+            </a>
+            
+            <!-- Categoría Agro 5 -->
+            <a href="#" class="bg-white rounded-2xl p-6 text-center agro-card flex flex-col items-center gap-4 group">
+                <div class="w-16 h-16 rounded-2xl flex items-center justify-center agro-icon-bg group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                    <i data-lucide="microscope" class="w-8 h-8"></i>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base leading-tight">Asesoría Técnica</h3>
+                    <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2 py-1 rounded-md mt-3 inline-block border border-emerald-100">6 disponibles</span>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Banner para reclutar trabajadores agro -->
+        <div class="mt-12 bg-slate-900 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500 rounded-full blur-3xl opacity-20 -mr-20 -mt-20 pointer-events-none"></div>
+            <div class="z-10 text-center md:text-left">
+                <h3 class="text-white text-2xl font-bold mb-2">¿Ofreces servicios para el campo?</h3>
+                <p class="text-slate-400">Miles de agricultores en Huánuco buscan técnicos y transporte. Únete a ConnectGoo Agro.</p>
+            </div>
+            <a href="#" class="z-10 px-6 py-3 bg-emerald-500 text-white font-bold rounded-xl hover:bg-emerald-400 transition-colors shadow-lg shadow-emerald-500/30 whitespace-nowrap">
+                Anunciar mi servicio
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 2: SECCIÓN URBANA (El sistema actual que ya tienen) -->
+    <!-- ============================================== -->
+    <section id="content-urban" class="max-w-6xl mx-auto px-4 pb-24 hidden">
+        <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-100 rounded-2xl p-6 border border-slate-200">
+            <div class="flex items-center gap-4">
+                <div class="p-3.5 bg-slate-800 text-white rounded-xl shadow-sm"><i data-lucide="home"></i></div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900">Servicios Urbanos</h2>
+                    <p class="text-slate-500">Reparaciones en casa, tecnología y oficios generales.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+            <!-- Categoría Urbana 1 -->
+            <a href="#" class="bg-white rounded-2xl p-6 text-center urban-card flex flex-col items-center justify-center gap-3">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center urban-icon-bg">
+                    <i data-lucide="zap" class="w-6 h-6 text-yellow-500"></i>
+                </div>
+                <h3 class="font-bold text-slate-700 text-sm">Electricista</h3>
+            </a>
+            
+            <!-- Categoría Urbana 2 -->
+            <a href="#" class="bg-white rounded-2xl p-6 text-center urban-card flex flex-col items-center justify-center gap-3">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center urban-icon-bg">
+                    <i data-lucide="droplets" class="w-6 h-6 text-blue-500"></i>
+                </div>
+                <h3 class="font-bold text-slate-700 text-sm">Plomero</h3>
+            </a>
+            
+            <!-- Categoría Urbana 3 -->
+            <a href="#" class="bg-white rounded-2xl p-6 text-center urban-card flex flex-col items-center justify-center gap-3">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center urban-icon-bg">
+                    <i data-lucide="terminal" class="w-6 h-6 text-indigo-500"></i>
+                </div>
+                <h3 class="font-bold text-slate-700 text-sm">Desarrollador Software</h3>
+            </a>
+            
+             <!-- Categoría Urbana 4 -->
+            <a href="#" class="bg-white rounded-2xl p-6 text-center urban-card flex flex-col items-center justify-center gap-3">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center urban-icon-bg">
+                    <i data-lucide="paintbrush-2" class="w-6 h-6 text-orange-500"></i>
+                </div>
+                <h3 class="font-bold text-slate-700 text-sm">Pintura</h3>
+            </a>
+            
+            <!-- Categoría Urbana 5 -->
+            <a href="#" class="bg-white rounded-2xl p-6 text-center urban-card flex flex-col items-center justify-center gap-3">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center urban-icon-bg">
+                    <i data-lucide="sparkles" class="w-6 h-6 text-cyan-500"></i>
+                </div>
+                <h3 class="font-bold text-slate-700 text-sm">Limpieza</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- SCRIPT PARA EL FUNCIONAMIENTO DE LAS PESTAÑAS -->
+    <script>
+        // Inicializar iconos
+        lucide.createIcons();
+
+        // Lógica de las pestañas
+        function showTab(tab) {
+            const btnUrban = document.getElementById('btn-urban');
+            const btnAgro = document.getElementById('btn-agro');
+            const contentUrban = document.getElementById('content-urban');
+            const contentAgro = document.getElementById('content-agro');
+
+            if(tab === 'urban') {
+                // Activar Urbano
+                btnUrban.className = "flex-1 py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 tab-active shadow-md transition-all duration-300";
+                btnAgro.className = "flex-1 py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 tab-inactive transition-all duration-300";
+                
+                contentUrban.classList.remove('hidden');
+                // Pequeña animación de entrada
+                contentUrban.classList.add('animate-[fadeIn_0.3s_ease-in-out]');
+                
+                contentAgro.classList.add('hidden');
+            } else {
+                // Activar Agro
+                btnAgro.className = "flex-1 py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 tab-active shadow-md transition-all duration-300";
+                btnUrban.className = "flex-1 py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 tab-inactive transition-all duration-300";
+                
+                contentAgro.classList.remove('hidden');
+                contentAgro.classList.add('animate-[fadeIn_0.3s_ease-in-out]');
+                
+                contentUrban.classList.add('hidden');
+            }
+        }
+        
+        // Animación personalizada para Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* ====== FORMULARIO DE REGISTRO ====== */
+
+.form-card {
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-card label {
+    font-weight: bold;
+    color: #102033;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cfd8dc;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+    border-color: #00a94f;
+}
+
+.form-button {
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: normal !important;
+    line-height: 1.4;
+}
+
+.checkbox-label input {
+    width: auto;
+    margin-top: 3px;
+}
+
+.notice-box {
+    background: #e9fff1;
+    border-left: 4px solid #00a94f;
+    padding: 14px;
+    border-radius: 12px;
+    color: #34495e;
+}
+
+.error-box {
+    background: #ffecec;
+    border-left: 4px solid #e53935;
+    color: #7a1c1c;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+.error-box ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.success-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.success-icon {
+    font-size: 52px;
+    margin-bottom: 14px;
+}
+
+.success-card h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #102033;
+}
+
+.success-card p {
+    color: #34495e;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .verification-list,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ====== CAMPOS CONDICIONALES PARA EMPRENDIMIENTOS ====== */
+
+.conditional-fields {
+    background: #f6fbf8;
+    border: 1px solid #d7f8e4;
+    border-left: 5px solid #00a94f;
+    border-radius: 18px;
+    padding: 22px;
+    margin: 16px 0;
+}
+
+.conditional-fields.hidden {
+    display: none;
+}
+
+.conditional-fields h2 {
+    color: #102033;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.conditional-fields p {
+    color: #34495e;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}

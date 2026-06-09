@@ -1,0 +1,124 @@
+/* ====== CSS FOR app/views/public/registrar_servicio.php ====== */
+
+.register-page { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px 16px; 
+    padding-top: 100px; 
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Header */
+.page-header { text-align: center; margin-bottom: 40px; }
+.back-link { 
+    display: inline-flex; align-items: center; gap: 6px; 
+    color: #10b981; text-decoration: none; font-size: 14px; font-weight: 700; 
+    margin-bottom: 24px; background: white; padding: 8px 20px; 
+    border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+.page-header h1 { font-size: 38px; font-weight: 900; color: #0f172a; margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.5px; }
+.page-header p { color: #64748b; font-size: 17px; line-height: 1.6; max-width: 600px; margin: 0 auto; }
+
+/* Plan Seleccionado Card */
+.selected-plan-card {
+    border-radius: 24px; padding: 32px 32px 32px 40px; margin-bottom: 32px; position: relative;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+    display: flex; flex-direction: column; align-items: flex-start;
+}
+.selected-plan-card.basico {
+    background: white; border: 1px solid #e2e8f0; color: #0f172a;
+}
+.selected-plan-card.basico h2 { color: #0f172a; }
+.selected-plan-card.basico h3 { color: #10b981; }
+.selected-plan-card.basico p { color: #475569; }
+.selected-plan-card.basico .plan-badge { background: #e2e8f0; color: #475569; box-shadow: none; }
+.selected-plan-card.basico .clear-search { background: #f1f5f9; color: #475569; }
+.selected-plan-card.basico .clear-search:hover { background: #e2e8f0; }
+
+.selected-plan-card.destacado {
+    background: #10b981; color: white;
+}
+.selected-plan-card.destacado h2 { color: white; }
+.selected-plan-card.destacado h3 { color: #d1fae5; }
+.selected-plan-card.destacado p { color: #ecfdf5; }
+.selected-plan-card.destacado .plan-badge { background: #059669; color: white; }
+
+.selected-plan-card.premium {
+    background: linear-gradient(135deg, #1e293b, #0f172a); color: white;
+}
+.selected-plan-card.premium h2 { color: white; }
+.selected-plan-card.premium h3 { color: #3b82f6; }
+.selected-plan-card.premium p { color: #94a3b8; }
+.selected-plan-card.premium .plan-badge { background: #3b82f6; color: white; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3); }
+
+.plan-badge { 
+    position: absolute; top: 0; left: 0; transform: translateY(-50%) translateX(32px);
+    font-size: 12px; font-weight: 800; padding: 6px 16px; border-radius: 50px; text-transform: uppercase; 
+}
+.selected-plan-card h2 { font-size: 26px; font-weight: 800; margin: 0 0 8px; }
+.selected-plan-card h3 { font-size: 22px; font-weight: 800; margin: 0 0 16px; }
+.selected-plan-card p { font-size: 15px; margin-bottom: 24px; line-height: 1.5; }
+.clear-search { display: inline-block; background: rgba(255,255,255,0.15); color: white; padding: 8px 16px; border-radius: 12px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.1); }
+.clear-search:hover { background: rgba(255,255,255,0.25); }
+
+/* Errores */
+.error-box { background: #fef2f2; border: 1.5px dashed #f87171; border-radius: 16px; padding: 24px; margin-bottom: 32px; color: #991b1b; }
+.error-box strong { display: block; font-size: 16px; font-weight: 800; margin-bottom: 12px; }
+.error-box ul { margin: 0; padding-left: 20px; }
+.error-box li { font-size: 14px; line-height: 1.5; margin-bottom: 6px; }
+
+/* Tarjeta Éxito */
+.success-card { background: white; border-radius: 24px; padding: 50px 32px; text-align: center; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; }
+.success-icon { font-size: 72px; margin-bottom: 24px; animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+@keyframes scaleIn { from { transform: scale(0); } to { transform: scale(1); } }
+.success-card h2 { font-size: 32px; font-weight: 900; color: #0f172a; margin-bottom: 16px; letter-spacing: -0.5px; }
+.success-card p { font-size: 16px; color: #64748b; line-height: 1.6; margin-bottom: 16px; max-width: 500px; margin-left: auto; margin-right: auto; }
+.success-card strong { color: #059669; display: inline-block; background: #ecfdf5; padding: 12px 24px; border-radius: 50px; margin-top: 8px; font-size: 15px; }
+.success-card .btn-primary { margin-top: 32px; display: inline-block; padding: 16px 32px; border-radius: 50px; background: #10b981; color: white; font-weight: 700; font-size: 16px; text-decoration: none; transition: all 0.3s; box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3); }
+.success-card .btn-primary:hover { background: #059669; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4); }
+
+/* Formulario Principal */
+.form-card { background: white; border-radius: 24px; padding: 40px 32px; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; }
+
+.form-card label { display: block; font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 8px; margin-top: 28px; }
+.form-card label:first-child { margin-top: 0; }
+
+.form-card input[type="text"], 
+.form-card input[type="email"], 
+.form-card input[type="number"], 
+.form-card input[type="url"],
+.form-card select, 
+.form-card textarea {
+    width: 100%; padding: 16px; border-radius: 12px; border: 1.5px solid #cbd5e1; background: #f8fafc; font-size: 15px; color: #0f172a; transition: all 0.2s; font-family: inherit;
+}
+.form-card input::placeholder, .form-card textarea::placeholder { color: #94a3b8; }
+.form-card input:focus, .form-card select:focus, .form-card textarea:focus {
+    outline: none; border-color: #10b981; background: white; box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+}
+
+.form-card input[type="file"] { width: 100%; padding: 16px; border: 2px dashed #cbd5e1; border-radius: 16px; background: #f8fafc; cursor: pointer; transition: all 0.3s; color: #64748b; }
+.form-card input[type="file"]:hover { border-color: #10b981; background: #f0fdf4; color: #059669; }
+
+/* Cajas de Aviso */
+.notice-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-top: 12px; color: #475569; font-size: 14px; line-height: 1.6; font-weight: 500; display: flex; gap: 10px; align-items: flex-start; }
+.notice-box i { flex-shrink: 0; }
+
+/* Checkboxes */
+.checkbox-label { display: flex !important; align-items: flex-start; gap: 12px; font-weight: 500 !important; font-size: 15px !important; color: #334155 !important; cursor: pointer; margin-top: 32px !important; }
+.checkbox-label input[type="checkbox"] { width: 22px; height: 22px; margin-top: 1px; accent-color: #10b981; cursor: pointer; }
+
+/* Bloque Condicional Emprendimiento */
+.conditional-fields { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 20px; padding: 24px; margin-top: 32px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); }
+.conditional-fields h2 { font-size: 20px; font-weight: 800; color: #0f172a; margin: 0 0 8px; }
+.conditional-fields p { font-size: 14px; color: #64748b; margin-bottom: 24px; }
+.conditional-fields.hidden { display: none; }
+
+/* Botón de Envío */
+.form-button { width: 100%; padding: 18px; border-radius: 16px; background: #10b981; color: white; font-weight: 800; font-size: 18px; border: none; cursor: pointer; transition: all 0.3s; margin-top: 40px; box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3); }
+.form-button:hover { background: #059669; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4); }
+
+/* Botones Secundarios */
+.btn-secondary { background: #f1f5f9; color: #334155; padding: 14px 20px; border-radius: 12px; font-weight: 700; font-size: 15px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s; }
+.btn-secondary:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8; }

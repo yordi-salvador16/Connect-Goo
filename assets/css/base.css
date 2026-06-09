@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eefaf2;
+    color: #102033;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #008b45;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    color: #34495e;
+}
+
+.hero-image {
+    max-width: 450px;
+    height: 180px;
+    margin: 0 auto 30px auto;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00a94f, #d7f8e4);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 450px;
+    margin: auto;
+}
+
+.btn-primary,
+.btn-secondary {
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: bold;
+    display: block;
+}
+
+.btn-primary {
+    background: #00a94f;
+    color: white;
+}
+
+.btn-secondary {
+    border: 2px solid #00a94f;
+    color: #00a94f;
+    background: white;
+}
+
+.admin-link {
+    display: block;
+    margin-top: 25px;
+    color: #34495e;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.card,
+.category-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.categories h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.category-card {
+    text-decoration: none;
+    color: #102033;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .benefits,
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
